@@ -85,6 +85,7 @@ END {
         for (network in networks) {
             if (networks[network] == s) {
                 print network
+                delete networks[network]
             }
         }
     }
