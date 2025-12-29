@@ -25,7 +25,7 @@ curl https://raw.githubusercontent.com/mattoberle/dmenu-iwd/main/dmenu-iwd >~/bi
 chmod +x ~/bin/dmenu-iwd
 
 # For NetworkManager users...
-curl https://raw.githubusercontent.com/mattoberle/dmenu-iwd/main/dmenu-iwd >~/bin/dmenu-nm
+curl https://raw.githubusercontent.com/mattoberle/dmenu-iwd/main/dmenu-nm >~/bin/dmenu-nm
 chmod +x ~/bin/dmenu-nm
 ```
 
