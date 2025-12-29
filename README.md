@@ -12,7 +12,7 @@ Connect to wireless networks via `dmenu`.
 
 - [`dmenu`](https://wiki.archlinux.org/title/dmenu)
 - [`dunst`](https://wiki.archlinux.org/title/Dunst)
-- [`iwd`](https://wiki.archlinux.org/title/iwd)
+- [`iwd`](https://wiki.archlinux.org/title/iwd) or [`nmcli`](https://wiki.archlinux.org/title/NetworkManager)
 - A user in the `netdev` or `wheel` group
 
 ### Installation
@@ -20,8 +20,13 @@ Connect to wireless networks via `dmenu`.
 Download the script and place it somewhere on your `$PATH`, eg.
 
 ```sh
+# For IWD users...
 curl https://raw.githubusercontent.com/mattoberle/dmenu-iwd/main/dmenu-iwd >~/bin/dmenu-iwd
 chmod +x ~/bin/dmenu-iwd
+
+# For NetworkManager users...
+curl https://raw.githubusercontent.com/mattoberle/dmenu-iwd/main/dmenu-iwd >~/bin/dmenu-nm
+chmod +x ~/bin/dmenu-nm
 ```
 
 ### i3 Integration
@@ -31,7 +36,11 @@ Choose a key combination to bind in `~/.config/i3/config`.
 Run `i3reload` after to activate the binding.
 
 ```
+# For IWD users...
 bindsym $mod+n exec --no-startup-id dmenu-iwd
+
+# For NetworkManager users...
+bindsym $mod+n exec --no-startup-id dmenu-nm
 ```
 
 ### Customization
